@@ -1,0 +1,11 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+  },
+  "extensions": [
+    "amazonwebservices.aws-toolkit-vscode",
+    "github.vscode-pull-request-github",
+    "github.copilot-chat",
+    "github.copilot"
+  ]
+}
