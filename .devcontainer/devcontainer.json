@@ -3,9 +3,9 @@
   "features": {
   },
   "extensions": [
-    "amazonwebservices.aws-toolkit-vscode",
     "github.vscode-pull-request-github",
     "github.copilot-chat",
-    "github.copilot"
+    "github.copilot",
+    "vscjava.vscode-java-pack"
   ]
 }
