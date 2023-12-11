@@ -49,7 +49,7 @@ Given these prompts, the following requirements for the program were defined as 
         * :white_check_mark::black_square_button: Sets the custom size of the shopping cart
     * :black_square_button::black_square_button: Addition methods for the objects
         * :white_check_mark::black_square_button: ```add()``` method to add an item to the shopping cart
-        * :black_square_button::black_square_button: ```testAddl()``` method to add cart to an other cart
+        * :black_square_button::black_square_button: ```testAddl()``` = ```combineCart()``` method to add cart to an other cart
     * :white_check_mark::black_square_button: Information methods for the objects
         * :white_check_mark::black_square_button: ```isFUll()``` method to see if the shopping cart is full
     * :white_check_mark::black_square_button: Output methods for the objects
@@ -77,10 +77,16 @@ class ShoppingCart
         else
             throw error
 
+    Public ShoppingCart(int size, CartItem firstCartItem)
+    Public ShoppingCart(CartItem firstCartItem)
+
     Public void add(CartItem newItem)
         cartBag.add(newItem)
 
-    Public boolean testAddl()
+    Public boolean combineCart(ShoppingCart incomingCart)
+        foreach CartItem in incomingCart
+            cartBag += CartItem
+
     Public boolean isFull()
         if(cartBag.count >= maxSize)
             return true
