@@ -8,10 +8,19 @@ public class Mod5Factorials {
     }
 
     public static int FactorialB(int n) {
-        int result = 1;
-        for(int i = 1; i <= n; i++) {
-            result *= i;
+        if(n == 0 || n == 1) {
+            return 1;
+        } else {
+            int current = 2;
+            return 1 * FactorialB(current, n);
         }
-        return result;
+    }
+
+    private static int FactorialB(int n, int original) {
+        if(n < original) {
+            return n * FactorialB(n + 1, original);
+        } else {
+            return n;
+        }
     }
 }
